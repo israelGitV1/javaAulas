@@ -25,7 +25,7 @@ public class MainData {
 		data2.ano =entrada.nextInt();
 		entrada.close();
 		
-		System.out.printf(" Data1: %d/%d/%d \n Data2: %d/%d/%d",data1.dia,data1.mes,data1.ano,
-				                                              data2.dia,data2.mes,data2.ano);
+		System.out.printf(" Data1: %s \n Data2: %s",data1.obterDataFormatada(),
+				                                              data2.obterDataFormatada());
 	}
 }

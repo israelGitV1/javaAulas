@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Matriz {
@@ -18,9 +19,6 @@ public class Matriz {
 		soma = new double[numAlunos];
 		media = new double [numAlunos];
 		
-		System.out.println(notasAlunos.length);
-		System.out.println(notasAlunos[0].length);
-		
 		for (int a = 0; a < notasAlunos.length; a++) {
 			for (int n = 0; n < (notasAlunos[a].length); n++) {
 				System.out.printf("Aluno %d Digite a %d nota:",a+1,n+1);
@@ -29,6 +27,9 @@ public class Matriz {
 			}
 			System.out.println();
 			media[a] = soma[a] / notasAlunos[a].length;
+		}
+		for(double[] notasAluno: notasAlunos) {
+			System.out.println(Arrays.toString(notasAluno)); // teste valida matriz completa
 		}
 		
         for(int i = 0; i < media.length ; i++) {

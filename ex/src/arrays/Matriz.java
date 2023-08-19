@@ -30,15 +30,10 @@ public class Matriz {
 			System.out.println();
 			media[a] = soma[a] / notasAlunos[a].length;
 		}
-//		for(int i = 0; i < soma.length ; i++){
-//			media[i] = soma[i] / notasAlunos[i].length;
-//		}
 		
         for(int i = 0; i < media.length ; i++) {
         	System.out.printf("\n Aluno: %d \nsoma das notas: %.2f\nmédia: %.2f\n",i+1,soma[i],media[i]);
         }
-		
-
 		
 		System.out.println();
 		

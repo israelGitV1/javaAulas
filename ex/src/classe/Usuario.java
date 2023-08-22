@@ -16,4 +16,10 @@ public class Usuario {
 		}else
 		return false;
 	}
+	
+	// O hascode  será abordado em outra aula!
+	
+	public int hascode() {
+		return 0;
+	}
 }

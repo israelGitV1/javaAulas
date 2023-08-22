@@ -2,7 +2,7 @@ package classe;
 
 import java.util.Date;
 
-public class EqualsHashcode {
+public class Equals {
 
 	public static void main(String[] args) {
 		

@@ -40,6 +40,8 @@ public class ConjuntoComportado {
 		num.add(120);
 		num.add(6);
 		
+		//num.get(2); // Não é possível acessar pelo índice.
+		
 		for(int n:num) {
 			System.out.println(n);
 		}

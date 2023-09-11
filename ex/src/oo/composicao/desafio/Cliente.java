@@ -5,11 +5,10 @@ import java.util.ArrayList;
 public class Cliente {
 
 	public String nome;
-	ArrayList<Compra> compra;
+	ArrayList<Compra> compra = new ArrayList<Compra>();
 	
 	public Cliente(String nome) {
 		this.nome = nome;
-		this.compra = new ArrayList<Compra>();
 	}
 	
 	public void addCompra(Compra compra) {

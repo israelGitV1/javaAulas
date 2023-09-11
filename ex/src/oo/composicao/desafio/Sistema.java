@@ -5,41 +5,26 @@ public class Sistema {
 
 	public static void main(String[] args) {
 		
-		Cliente cliente;
-		Cliente cliente2;
-		Compra compra;
+		Compra compra1 = new Compra();
+		compra1.addCompra("Caderno", 10, 10);
+		compra1.addCompra("Notbook", 4000,1);
+
+		Compra compra2 = new Compra();
+		compra2.addCompra("Caderno", 10, 10);
+		compra2.addCompra("Impressora", 1000,1);
 		
-		cliente = new Cliente("Israel");
-		cliente.addCompra("Notbook Del",7000,1);
-		cliente.addCompra("Monitor",1000,1);
-		cliente.addCompra("Teclade",300,4);
-		cliente.addCompra("Apoio de pé",170,1);
-		cliente.addCompra("Cadeira",1200,2);
+		Cliente cliente = new Cliente("Ana");
+		cliente.addCompra(compra1);
+		cliente.addCompra(compra2);
 		
-		cliente2 = new Cliente("Gustavo");
+		System.out.println(cliente.totalCompra()
+				+ "\ncompras1: " + cliente.compra.get(0).totalItens());
 		
-		compra = new Compra();
-		compra.addCompra("NOtbook", 4000, 1);
-		compra.addCompra("Mouse",100,2);
-		compra.addCompra("Danone",10,5);
-        cliente2.addCompra(compra);
-        cliente2.addCompra("Tela", 1000, 1);
-		
-		System.out.println("Cliente: "+cliente.nome
-				        +"\nTotal Compra: "+cliente.totalCompra());
-		
-		for(Compra c : cliente.compra){
-			System.out.println(c.totalItens());
-			
+		for(Compra compras: cliente.compra) {
+			for(Item itens: compras.item)
+			System.out.println("Compras: "+ itens.totalProduto());
 		}
 		
-		System.out.println("\n\n\nCliente: "+cliente2.nome
-				+"\nTotal Compra: "+cliente2.totalCompra());
-
-		System.out.println("\n\n\nCliente: "+cliente2.nome
-				+"\nTotal Compra: "+cliente2.compra.get(1).item.get(0).totalProduto());
-		
-
 		
 	}
 }

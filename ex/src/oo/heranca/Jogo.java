@@ -7,7 +7,7 @@ public class Jogo {
 		mostro.x = 10;
 		mostro.y = 10;
 		
-		Jogador heroi = new Heroi();
+		Jogador heroi = new Heroi(10,10);
 		heroi.x = 10;
 		heroi.y = 11;
 		

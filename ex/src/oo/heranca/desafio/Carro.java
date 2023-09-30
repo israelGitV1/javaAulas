@@ -4,6 +4,7 @@ public class Carro {
 
 	double velocidade;
 	
+	
 	void acelerar() {
 		if(velocidade >= 0) {
 			velocidade += 5;
@@ -11,9 +12,15 @@ public class Carro {
 	}
 	
 	void frear() {
-		if(velocidade > 0 ) {
+		if(velocidade >= 5 ) {
 			velocidade -=5;
+		}else {
+			velocidade = 0;
 		}
+	}
+	
+	public String toString() {
+		return "Velocidade Atual é : "+velocidade + "Km/h.";
 	}
 	
 }

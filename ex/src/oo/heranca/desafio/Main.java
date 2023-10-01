@@ -11,9 +11,26 @@ public class Main {
 		
 		Ferrari.frear();
 		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
+		Ferrari.acelerar();
 		System.out.println("Velocidade Ferrari: "+Ferrari.velocidade);
 		
 		Civic.frear();
+		Civic.acelerar();
+		Civic.acelerar();
 		Civic.acelerar();
 		System.out.println("Velocidade Civic: "+Civic.velocidade);
 		

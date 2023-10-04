@@ -2,18 +2,18 @@ package oo.heranca.desafio;
 
 public class Civic extends Carro{
 
-	Civic(){
+	public Civic(){
 		super(212);
 	}
 	
 	@Override
-	void acelerar() {
+	public void acelerar() {
 		super.acelerar();
 		super.acelerar();
 	}
 	
 	@Override
-	void frear(){
+	public  void frear(){
 		super.frear();
 		super.frear();
 	}

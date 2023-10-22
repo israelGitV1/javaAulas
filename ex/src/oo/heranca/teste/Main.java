@@ -7,29 +7,18 @@ import oo.heranca.desafio.Ferrari;
 public class Main {
 
 	public static void main(String[] args) {
-		Carro Ferrari = new Ferrari();
+		Ferrari Ferrari = new Ferrari();
 		Carro Civic = new Civic();
 		
 		System.out.println("Velocidade Ferrari: "+Ferrari.velocidade);
 		System.out.println("Velocidade Civic: "+Civic.velocidade);
 		
+		
 		Ferrari.frear();
 		Ferrari.acelerar();
+		Ferrari.ligarTurbo();
 		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
-		Ferrari.acelerar();
+		
 		System.out.println("Velocidade Ferrari: "+Ferrari.velocidade);
 		
 		Civic.frear();
@@ -40,6 +29,10 @@ public class Main {
 		
 		Ferrari.frear();
 		System.out.println("Velocidade Ferrari: "+Ferrari.velocidade);
+		
+		System.out.println("Ar Ferrari: "+Ferrari.getAr());
+		Ferrari.ligarAr();
+		System.out.println("Ar Ferrari: "+Ferrari.getAr());
 		
 		Civic.frear();
 		System.out.println("Velocidade Civic: "+Civic.velocidade);

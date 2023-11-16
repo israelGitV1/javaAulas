@@ -3,6 +3,7 @@ package lambdas;
 import java.text.DecimalFormat;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
 public class Desafio {
 
@@ -16,7 +17,7 @@ public class Desafio {
 		 * 2. Imposto Municipal: >= 2500 (8,5%)/ < 2500	(Isento)
 		 * 3. Frete: >= 3000 (100)/ < 3000 (50)
 		 * 4. Arredondar: Deixar duas casas decimais
-		 * 5. Formatar: R$1234,56
+		 * 5. Formatar: R$1234,56 
 		 * 
 		 */
 		
@@ -28,10 +29,10 @@ public class Desafio {
 		
 		
 		Function<Produto, Double> comDesconto = p -> p.preco * (1 - p.desconto);
-		Function<Double, Double> comImposto = v -> v >= 2500 ?(v * 0.085) + v : v ;
-		Function<Double, Double> comFrete = v -> v >= 3000 ? v + 100 : v + 50;
+		UnaryOperator<Double> comImposto = v -> v >= 2500 ?(v * 0.085) + v : v ;
+		UnaryOperator<Double> comFrete = v -> v >= 3000 ? v + 100 : v + 50;
 		Function<Double, String> comArredondamento = v -> df.format(v);
-		Function<String, String> comFomatoReal = v -> "R$:" + v;
+		UnaryOperator<String> comFomatoReal = v -> "R$:" + v;
 		
 		System.out.println(comDesconto.apply(p1));
 		System.out.println(comDesconto.andThen(comImposto).apply(p1));
@@ -40,11 +41,14 @@ public class Desafio {
 				                      .andThen(comFrete)
 				                      .andThen(comArredondamento)
 				                      .apply(p1));
-		System.out.println(comDesconto.andThen(comImposto)
+		
+		String preco =comDesconto.andThen(comImposto)
                 .andThen(comFrete)
                 .andThen(comArredondamento)
                 .andThen(comFomatoReal)
-                .apply(p1));
+                .apply(p1);
+		
+		System.out.println("O preço final é "+preco);
 		
 		
 	

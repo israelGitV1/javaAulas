@@ -26,7 +26,7 @@ public class CriandoStreams {
 		outrasLangs.parallelStream().forEach(print);
 		
 		// Stream.generate(() -> "a\n").forEach(print); Imprime o "a" de forma infinita !
-		// Stream.iterate(0,n -> n + 1).forEach(println); gera a soma infinito iniciando com "0"
+		// Stream.iterate(0,n -> n + 1).forEach(println); gera a soma infinito iniciando com "0" 
 		
 	}
 }
